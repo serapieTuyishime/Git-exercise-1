@@ -1,7 +1,9 @@
 # Git-exercise-1
 
 ## bundle one
+
 ### exercise 1
+
 ```bash
 Windows PowerShell
 Copyright (C) Microsoft Corporation. All rights reserved.
@@ -12,7 +14,7 @@ Initialized empty Git repository in C:/Users/TheGym/Desktop/Git exercises/.git/
 PS C:\Users\TheGym\Desktop\Git exercises>
 PS C:\Users\TheGym\Desktop\Git exercises> git branch -M main
 PS C:\Users\TheGym\Desktop\Git exercises> echo "This is text filecreated in command line" > draft.txt
-PS C:\Users\TheGym\Desktop\Git exercises> echo "this file will be deleted!" > "to delete.txt" 
+PS C:\Users\TheGym\Desktop\Git exercises> echo "this file will be deleted!" > "to delete.txt"
 PS C:\Users\TheGym\Desktop\Git exercises> del "to delete.txt"
 PS C:\Users\TheGym\Desktop\Git exercises> dir
 
@@ -30,7 +32,7 @@ PS C:\Users\TheGym\Desktop\Git exercises> dir
 -a----        10/18/2022   5:04 PM             88 draft.txt
 
 
-PS C:\Users\TheGym\Desktop\Git exercises> ren "draft.txt" "draft Renamed.txt"    
+PS C:\Users\TheGym\Desktop\Git exercises> ren "draft.txt" "draft Renamed.txt"
 PS C:\Users\TheGym\Desktop\Git exercises> dir
 
 
@@ -47,7 +49,7 @@ PS C:\Users\TheGym\Desktop\Git exercises> git commit -m "main: manuputated files
  1 file changed, 0 insertions(+), 0 deletions(-)
  create mode 100644 draft Renamed.txt
 PS C:\Users\TheGym\Desktop\Git exercises> git remote add origin https://github.com/serapieTuyishime/Git-exercise-1.git
-PS C:\Users\TheGym\Desktop\Git exercises> git push 
+PS C:\Users\TheGym\Desktop\Git exercises> git push
 fatal: The current branch main has no upstream branch.
 To push the current branch and set the remote as upstream, use
 
@@ -59,7 +61,7 @@ upstream, see 'push.autoSetupRemote' in 'git help config'.
 PS C:\Users\TheGym\Desktop\Git exercises> git push --set-upstream  origin main
 To https://github.com/serapieTuyishime/Git-exercise-1.git
  ! [rejected]        main -> main (fetch first)
-error: failed to push some refs to 'https://github.com/serapieTuyishime/Git-exercise-1.git'   
+error: failed to push some refs to 'https://github.com/serapieTuyishime/Git-exercise-1.git'
 hint: not have locally. This is usually caused by another repository pushing
 hint: to the same ref. You may want to first integrate the remote changes
 hint: (e.g., 'git pull ...') before pushing again.
@@ -72,15 +74,15 @@ From https://github.com/serapieTuyishime/Git-exercise-1
  * [new branch]      main       -> origin/main
 There is no tracking information for the current branch.
 Please specify which branch you want to merge with.
-error: failed to push some refs to 'https://github.com/serapieTuyishime/Git-exercise-1.git'   
+error: failed to push some refs to 'https://github.com/serapieTuyishime/Git-exercise-1.git'
 hint: Updates were rejected because the tip of your current branch is behind
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 
 PS C:\Users\TheGym\Desktop\Git exercises> git add .
-PS C:\Users\TheGym\Desktop\Git exercises> git commit -m "main: connected remote and local"    
+PS C:\Users\TheGym\Desktop\Git exercises> git commit -m "main: connected remote and local"
 On branch main
 nothing to commit, working tree clean
-PS C:\Users\TheGym\Desktop\Git exercises> git remote add origin 
+PS C:\Users\TheGym\Desktop\Git exercises> git remote add origin
 usage: git remote add [<options>] <name> <url>
 
     --tags                import all tags and associated objects when fetching
@@ -113,65 +115,66 @@ PS C:\Users\TheGym\Desktop\Git exercises> git checkout -b  dev
 fatal: a branch named 'dev' already exists
 PS C:\Users\TheGym\Desktop\Git exercises> git switch dev
 Switched to branch 'dev'
-PS C:\Users\TheGym\Desktop\Git exercises> git branch --delete test 
+PS C:\Users\TheGym\Desktop\Git exercises> git branch --delete test
 Deleted branch test (was f533d24).
 PS C:\Users\TheGym\Desktop\Git exercises> git branch -a
 * dev
   main
   remotes/origin/main
 PS C:\Users\TheGym\Desktop\Git exercises> git add .
-PS C:\Users\TheGym\Desktop\Git exercises> git commit -m "exercise one done bundle1 done"      
+PS C:\Users\TheGym\Desktop\Git exercises> git commit -m "exercise one done bundle1 done"
 On branch dev
 nothing to commit, working tree clean
 PS C:\Users\TheGym\Desktop\Git exercises> git push --set-upstream origin main
 Everything up-to-date
 branch 'main' set up to track 'origin/main'.
-PS C:\Users\TheGym\Desktop\Git exercises> 
+PS C:\Users\TheGym\Desktop\Git exercises>
 ```
+
 ### exercise 2
 
 ```bash
 
-PS C:\Users\TheGym\Desktop\Git exercises> git init      
+PS C:\Users\TheGym\Desktop\Git exercises> git init
 Reinitialized existing Git repository in C:/Users/TheGym/Desktop/Git exercises/.git/
 PS C:\Users\TheGym\Desktop\Git exercises> git stash clear
-PS C:\Users\TheGym\Desktop\Git exercises> echo "hdhhf" >"home.html" 
+PS C:\Users\TheGym\Desktop\Git exercises> echo "hdhhf" >"home.html"
 
 PS C:\Users\TheGym\Desktop\Git exercises> git add home.html
 d24 main: manuputated files
-PS C:\Users\TheGym\Desktop\Git exercises> echo "this is 
+PS C:\Users\TheGym\Desktop\Git exercises> echo "this is
 d24 main: manuputated files
 PS C:\Users\TheGym\Desktop\Git exercises> git stash list
-stash@{1}: WIP on dev: f533d24 main: manuputated files  
-PS C:\Users\TheGym\Desktop\Git exercises> echo "this is 
+stash@{1}: WIP on dev: f533d24 main: manuputated files
+PS C:\Users\TheGym\Desktop\Git exercises> echo "this is
 the teams page" > "teams.html"
-PS C:\Users\TheGym\Desktop\Git exercises> git stash     
+PS C:\Users\TheGym\Desktop\Git exercises> git stash
 Saved working directory and index state WIP on dev: f533d24 main: manuputated files
 PS C:\Users\TheGym\Desktop\Git exercises> git stash list
 
-stash@{0}: WIP on dev: f533d24 main: manuputated files  
-stash@{1}: WIP on dev: f533d24 main: manuputated files  
-stash@{2}: WIP on dev: f533d24 main: manuputated files  
-PS C:\Users\TheGym\Desktop\Git exercises> git checkout  
+stash@{0}: WIP on dev: f533d24 main: manuputated files
+stash@{1}: WIP on dev: f533d24 main: manuputated files
+stash@{2}: WIP on dev: f533d24 main: manuputated files
+PS C:\Users\TheGym\Desktop\Git exercises> git checkout
 stash@{1} about.html
 error: unknown switch `e'
 usage: git checkout [<options>] <branch>
-   or: git checkout [<options>] [<branch>] -- <file>... 
+   or: git checkout [<options>] [<branch>] -- <file>...
 
     -b <branch>           create and checkout a new branch
     -B <branch>           create/reset and checkout a branch
-    -l                    create reflog for new branch  
+    -l                    create reflog for new branch
     --guess               second guess 'git checkout <no-such-branch>' (default)
-    --overlay             use overlay mode (default)    
-    -q, --quiet           suppress progress reporting   
+    --overlay             use overlay mode (default)
+    -q, --quiet           suppress progress reporting
     --recurse-submodules[=<checkout>]
-                          control recursive updating of 
+                          control recursive updating of
 submodules
-    --progress            force progress reporting      
+    --progress            force progress reporting
     -m, --merge           perform a 3-way merge with the new branch
-    --conflict <style>    conflict style (merge, diff3, 
+    --conflict <style>    conflict style (merge, diff3,
 or zdiff3)
-    -d, --detach          detach HEAD at named commit   
+    -d, --detach          detach HEAD at named commit
     -t, --track[=(direct|inherit)]
                           set branch tracking configuration
     -f, --force           force checkout (throw away local modifications)
@@ -186,23 +189,23 @@ or zdiff3)
 
 PS C:\Users\TheGym\Desktop\Git exercises> git stash list
 
-stash@{0}: WIP on dev: f533d24 main: manuputated files  
-stash@{1}: WIP on dev: f533d24 main: manuputated files  
-stash@{2}: WIP on dev: f533d24 main: manuputated files  
+stash@{0}: WIP on dev: f533d24 main: manuputated files
+stash@{1}: WIP on dev: f533d24 main: manuputated files
+stash@{2}: WIP on dev: f533d24 main: manuputated files
 
 PS C:\Users\TheGym\Desktop\Git exercises> git stash list
 
-stash@{0}: WIP on dev: f533d24 main: manuputated files  
-stash@{1}: WIP on dev: f533d24 main: manuputated files  
-stash@{2}: WIP on dev: f533d24 main: manuputated files  
-PS C:\Users\TheGym\Desktop\Git exercises> git stash pop 
-PS C:\Users\TheGym\Desktop\Git exercises> git stash pop 
- stash@{0}    
+stash@{0}: WIP on dev: f533d24 main: manuputated files
+stash@{1}: WIP on dev: f533d24 main: manuputated files
+stash@{2}: WIP on dev: f533d24 main: manuputated files
+PS C:\Users\TheGym\Desktop\Git exercises> git stash pop
+PS C:\Users\TheGym\Desktop\Git exercises> git stash pop
+ stash@{0}
 error: unknown switch `e'
-usage: git stash pop [--index] [-q|--quiet] [<stash>]   
+usage: git stash pop [--index] [-q|--quiet] [<stash>]
 
-    -q, --quiet           be quiet, only report errors  
-    --index               attempt to recreate the index 
+    -q, --quiet           be quiet, only report errors
+    --index               attempt to recreate the index
 1
 On branch dev
         new file:   about.html
@@ -210,17 +213,17 @@ On branch dev
 Dropped refs/stash@{1} (bb7d051a451edb7afc8ce1ede56c34ca15382f26)
 PS C:\Users\TheGym\Desktop\Git exercises> git stash list
 
-stash@{0}: WIP on dev: f533d24 main: manuputated files  
-stash@{1}: WIP on dev: f533d24 main: manuputated files  
+stash@{0}: WIP on dev: f533d24 main: manuputated files
+stash@{1}: WIP on dev: f533d24 main: manuputated files
 On branch dev
 Changes to be committed:
-  (use "git restore --staged <file>..." to unstage)     
+  (use "git restore --staged <file>..." to unstage)
         new file:   about.html
 Dropped refs/stash@{1} (0a2f674cebe3e4bdf3e1bfe42885bd4a7557b62f)
-PS C:\Users\TheGym\Desktop\Git exercises> git commit -m 
+PS C:\Users\TheGym\Desktop\Git exercises> git commit -m
 "dev: did the stashing and unstashing"
-[dev 0a3c229] dev: did the stashing and unstashing      
- 2 files changed, 0 insertions(+), 0 deletions(-)       
+[dev 0a3c229] dev: did the stashing and unstashing
+ 2 files changed, 0 insertions(+), 0 deletions(-)
  create mode 100644 about.html
  create mode 100644 home.html
 PS C:\Users\TheGym\Desktop\Git exercises> git push --set-upstream origin dev
@@ -229,37 +232,40 @@ Counting objects: 100% (5/5), done.
 Delta compression using up to 4 threads
 Compressing objects: 100% (4/4), done.
 Writing objects: 100% (4/4), 921 bytes | 307.00 KiB/s, done.
-Total 4 (delta 0), reused 0 (delta 0), pack-reused 0    
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
 iting:
 remote:
 To https://github.com/serapieTuyishime/Git-exercise-1.gi * [new branch]      dev -> dev
 branch 'dev' set up to track 'origin/dev'.
 PS C:\Users\TheGym\Desktop\Git exercises> git stash list
 
-stash@{0}: WIP on dev: f533d24 main: manuputated files  
-PS C:\Users\TheGym\Desktop\Git exercises> git stash pop 
+stash@{0}: WIP on dev: f533d24 main: manuputated files
+PS C:\Users\TheGym\Desktop\Git exercises> git stash pop
 o
 error: o is not a valid reference
-PS C:\Users\TheGym\Desktop\Git exercises> git stash pop 
+PS C:\Users\TheGym\Desktop\Git exercises> git stash pop
 Your branch is up to date with 'origin/dev'.
 
 Changes to be committed:
-  (use "git restore --staged <file>..." to unstage)     
+  (use "git restore --staged <file>..." to unstage)
         new file:   teams.html
 
 Dropped refs/stash@{0} (aab78323e4346404e68533e4c48053804a9859cc)
-PS C:\Users\TheGym\Desktop\Git exercises> git reset     
-PS C:\Users\TheGym\Desktop\Git exercises> git reset 
+PS C:\Users\TheGym\Desktop\Git exercises> git reset
+PS C:\Users\TheGym\Desktop\Git exercises> git reset
 ```
+
 ## bundle 2
+
 ### exercise one
+
 ```bash
 PS C:\Users\TheGym\Desktop\Git exercises> git checkout -b ft/bundle-2
 Switched to a new branch 'ft/bundle-2'
-PS C:\Users\TheGym\Desktop\Git exercises> git add .     
-PS C:\Users\TheGym\Desktop\Git exercises> git commit -m 
-"ft/bundle-2 created new services" 
-[ft/bundle-2 461f146] ft/bundle-2 created new services  
+PS C:\Users\TheGym\Desktop\Git exercises> git add .
+PS C:\Users\TheGym\Desktop\Git exercises> git commit -m
+"ft/bundle-2 created new services"
+[ft/bundle-2 461f146] ft/bundle-2 created new services
  2 files changed, 13 insertions(+)
  create mode 100644 services.html
  create mode 100644 teams.html
@@ -269,18 +275,19 @@ Counting objects: 100% (5/5), done.
 Delta compression using up to 4 threads
 Compressing objects: 100% (4/4), done.
 Writing objects: 100% (4/4), 894 bytes | 894.00 KiB/s, done.
-Total 4 (delta 0), reused 0 (delta 0), pack-reused 0    
-remote: 
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
 remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
 remote:      https://github.com/serapieTuyishime/Git-exercise-1/pull/new/ft/bundle-2
 remote:
 To https://github.com/serapieTuyishime/Git-exercise-1.git
  * [new branch]      ft/bundle-2 -> ft/bundle-2
 branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.
-PS C:\Users\TheGym\Desktop\Git exercises>          
+PS C:\Users\TheGym\Desktop\Git exercises>
 ```
 
 ### exercise 2
+
 ```bash
 
 PS C:\Users\TheGym\Desktop\Git exercises> git pull
@@ -335,7 +342,7 @@ Commit message options
     -C, --reuse-message <commit>
                           reuse message from specified commit
     --fixup [(amend|reword):]commit
-                          use autosquash formatted message to fixup or amend/reword specified commit        
+                          use autosquash formatted message to fixup or amend/reword specified commit
     --squash <commit>     use autosquash formatted message to squash specified commit
     --reset-author        the commit is authored by me now (used with -C/-c/--amend)
     --trailer <trailer>   add custom trailer(s)
@@ -370,12 +377,12 @@ Commit contents options
  Author: Chrissie <chrissiemhrk@gmail.com>
  Date: Wed Oct 19 17:36:45 2022 +0200
 PS C:\Users\TheGym\Desktop\Git exercises> git push --set-upstream origin ft/service-redesign
-PS C:\Users\TheGym\Desktop\Git exercises> git pull 
+PS C:\Users\TheGym\Desktop\Git exercises> git pull
 Already up to date.
 PS C:\Users\TheGym\Desktop\Git exercises> git checkout -b ft/service-redesign
 Switched to a new branch 'ft/service-redesign'
 PS C:\Users\TheGym\Desktop\Git exercises> git add .
-PS C:\Users\TheGym\Desktop\Git exercises> git status  
+PS C:\Users\TheGym\Desktop\Git exercises> git status
 On branch ft/service-redesign
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
@@ -496,11 +503,13 @@ nothing to commit, working tree clean
 PS C:\Users\TheGym\Desktop\Git exercises> git push -u origin main
 Everything up-to-date
 branch 'main' set up to track 'origin/main'.
-PS C:\Users\TheGym\Desktop\Git exercises> 
+PS C:\Users\TheGym\Desktop\Git exercises>
 ```
 
 ## bundle 3
+
 ### exercise 1
+
 ```bash
 PS C:\Users\TheGym\Desktop\Git exercises> git checkout -b ft/team-page
 Switched to a new branch 'ft/team-page'
@@ -536,7 +545,7 @@ Your branch is up to date with 'origin/main'.
 PS C:\Users\TheGym\Desktop\Git exercises> git checkout -b ft/contact-page
 Switched to a new branch 'ft/contact-page'
 PS C:\Users\TheGym\Desktop\Git exercises> git checkout ft/contact-page
- *  History restored 
+ *  History restored
 
 
 Try the new cross-platform PowerShell https://aka.ms/pscore6
@@ -654,7 +663,7 @@ PS C:\Users\TheGym\Desktop\Git exercises> git reset 1
 fatal: ambiguous argument '1': unknown revision or path not in the working tree.
 Use '--' to separate paths from revisions, like this:
 'git <command> [<revision>...] -- [<file>...]'
-PS C:\Users\TheGym\Desktop\Git exercises> git reset --hard 1       
+PS C:\Users\TheGym\Desktop\Git exercises> git reset --hard 1
 fatal: ambiguous argument '1': unknown revision or path not in the working tree.
 Use '--' to separate paths from revisions, like this:
 'git <command> [<revision>...] -- [<file>...]'
@@ -720,13 +729,13 @@ remote:
 To https://github.com/serapieTuyishime/Git-exercise-1.git
  * [new branch]      ft/team-page -> ft/team-page
 branch 'ft/team-page' set up to track 'origin/ft/team-page'.
-PS C:\Users\TheGym\Desktop\Git exercises> git checkout - 
+PS C:\Users\TheGym\Desktop\Git exercises> git checkout -
 Switched to branch 'main'
 Your branch is ahead of 'origin/main' by 1 commit.
   (use "git push" to publish your local commits)
 PS C:\Users\TheGym\Desktop\Git exercises> git checkout -b ft/contact-page
 fatal: a branch named 'ft/contact-page' already exists
-PS C:\Users\TheGym\Desktop\Git exercises> git checkout  ft/contact-page  
+PS C:\Users\TheGym\Desktop\Git exercises> git checkout  ft/contact-page
 Switched to branch 'ft/contact-page'
 PS C:\Users\TheGym\Desktop\Git exercises> git checkout  ft/team-page
 Switched to branch 'ft/team-page'
@@ -842,5 +851,84 @@ remote: Resolving deltas: 100% (1/1), completed with 1 local object.
 To https://github.com/serapieTuyishime/Git-exercise-1.git
    68722d8..8113593  ft/faq-page -> ft/faq-page
 branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
-PS C:\Users\TheGym\Desktop\Git exercises> 
+PS C:\Users\TheGym\Desktop\Git exercises>
+```
+
+## bundle3
+
+### exercise 2
+
+```bash
+PS C:\Users\TheGym\Desktop\Git exercises> git branch ft/home-page-redesign
+PS C:\Users\TheGym\Desktop\Git exercises> git branch -a
+  dev
+  ft/bundle-2
+  ft/contact-page
+  ft/service-redesign
+  ft/team-page
+  main
+  remotes/origin/dev
+  remotes/origin/ft/bundle-2
+  remotes/origin/ft/contact-page
+  remotes/origin/ft/faq-page
+  remotes/origin/ft/service-redesign
+  remotes/origin/ft/team-page
+  remotes/origin/main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+PS C:\Users\TheGym\Desktop\Git exercises> git add .
+PS C:\Users\TheGym\Desktop\Git exercises> git commit -m "main: made some changes da!"
+[main 4f91db3] main: made some changes da!
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+PS C:\Users\TheGym\Desktop\Git exercises> git push -u origin main
+To https://github.com/serapieTuyishime/Git-exercise-1.git
+ ! [rejected]        main -> main (fetch first)
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+PS C:\Users\TheGym\Desktop\Git exercises> git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+From https://github.com/serapieTuyishime/Git-exercise-1
+Merge made by the 'ort' strategy.
+ README.md | 346 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 346 insertions(+)
+PS C:\Users\TheGym\Desktop\Git exercises> git push -u origin main
+Enumerating objects: 9, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 767 bytes | 767.00 KiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
+To https://github.com/serapieTuyishime/Git-exercise-1.git
+   fbc7586..47eea8e  main -> main
+branch 'main' set up to track 'origin/main'.
+PS C:\Users\TheGym\Desktop\Git exercises> git checkout ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+PS C:\Users\TheGym\Desktop\Git exercises> git add .
+PS C:\Users\TheGym\Desktop\Git exercises> git commit -m "ft:redesigned the homepage"
+[ft/home-page-redesign ffdd6c6] ft:redesigned the homepage
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+PS C:\Users\TheGym\Desktop\Git exercises> git push -u origin ft/home-page-redesign
+Enumerating objects: 16, done.
+Counting objects: 100% (16/16), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (14/14), done.
+Writing objects: 100% (14/14), 1.80 KiB | 461.00 KiB/s, done.
+Total 14 (delta 7), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (7/7), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/serapieTuyishime/Git-exercise-1/pull/new/ft/home-page-redesign
+remote:
+To https://github.com/serapieTuyishime/Git-exercise-1.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
+PS C:\Users\TheGym\Desktop\Git exercises>
 ```
