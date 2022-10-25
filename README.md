@@ -932,3 +932,50 @@ To https://github.com/serapieTuyishime/Git-exercise-1.git
 branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
 PS C:\Users\TheGym\Desktop\Git exercises>
 ```
+## bundle 4
+### exercise 1
+```bash
+PS C:\Users\TheGym\Desktop\Git exercises> git remote add git-copy https://github.com/serapieTuyishime/Git-exercise-2.git
+PS C:\Users\TheGym\Desktop\Git exercises> git add .
+PS C:\Users\TheGym\Desktop\Git exercises> git commit -m "main: added a new repo"
+[main 8fcaa31] main: added a new repo
+ 2 files changed, 157 insertions(+), 69 deletions(-)
+PS C:\Users\TheGym\Desktop\Git exercises> git push -u origin main
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 1.41 KiB | 721.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/serapieTuyishime/Git-exercise-1.git
+   47eea8e..8fcaa31  main -> main
+branch 'main' set up to track 'origin/main'.
+PS C:\Users\TheGym\Desktop\Git exercises> git push git-copy main
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/serapieTuyishime/Git-exercise-2.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+PS C:\Users\TheGym\Desktop\Git exercises> git push git-copy main
+To https://github.com/serapieTuyishime/Git-exercise-2.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/serapieTuyishime/Git-exercise-2.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+PS C:\Users\TheGym\Desktop\Git exercises> git push -f  git-copy main
+Enumerating objects: 42, done.
+Counting objects: 100% (42/42), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (41/41), done.
+Writing objects: 100% (42/42), 14.54 KiB | 930.00 KiB/s, done.
+Total 42 (delta 18), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (18/18), done.
+To https://github.com/serapieTuyishime/Git-exercise-2.git
+ + fa0c6d5...8fcaa31 main -> main (forced update)
+PS C:\Users\TheGym\Desktop\Git exercises> 
+```
