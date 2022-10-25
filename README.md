@@ -279,3 +279,222 @@ To https://github.com/serapieTuyishime/Git-exercise-1.git
 branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.
 PS C:\Users\TheGym\Desktop\Git exercises>          
 ```
+
+### exercise 2
+```bash
+
+PS C:\Users\TheGym\Desktop\Git exercises> git pull
+remote: Enumerating objects: 7, done.
+remote: Total 5 (delta 2), reused 0 (delta 0), pack-reused 0
+From https://github.com/serapieTuyishime/Git-exercise-1
+   f533d24..784e458  main       -> origin/main
+Updating f533d24..784e458
+Fast-forward
+ README.md     | 281 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ about.html    | Bin 0 -> 50 bytes
+ home.html     | Bin 0 -> 1412 bytes
+ 4 files changed, 294 insertions(+)
+ create mode 100644 README.md
+ create mode 100644 about.html
+ create mode 100644 home.html
+ create mode 100644 services.html
+PS C:\Users\TheGym\Desktop\Git exercises>
+                                          git checkout -b ft/service-redesign
+Switched to a new branch 'ft/service-redesign'
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   services.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\TheGym\Desktop\Git exercises> git push -u origin ft/service-redesign
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'ft/service-redesign' on GitHub by visiting:
+remote:      https://github.com/serapieTuyishime/Git-exercise-1/pull/new/ft/service-redesign
+remote:
+To https://github.com/serapieTuyishime/Git-exercise-1.git
+ * [new branch]      ft/service-redesign -> ft/service-redesign
+branch 'ft/service-redesign' set up to track 'origin/ft/service-redesign'.
+PS C:\Users\TheGym\Desktop\Git exercises> git add .
+PS C:\Users\TheGym\Desktop\Git exercises> git commit --ammend --no-edit
+error: unknown option `ammend'
+usage: git commit [<options>] [--] <pathspec>...
+
+    -q, --quiet           suppress summary after successful commit
+    -v, --verbose         show diff in commit message template
+
+Commit message options
+    -F, --file <file>     read message from file
+    --author <author>     override author for commit
+    --date <date>         override date for commit
+    -m, --message <message>
+                          commit message
+    -c, --reedit-message <commit>
+                          reuse and edit message from specified commit
+    -C, --reuse-message <commit>
+                          reuse message from specified commit
+    --fixup [(amend|reword):]commit
+                          use autosquash formatted message to fixup or amend/reword specified commit        
+    --squash <commit>     use autosquash formatted message to squash specified commit
+    --reset-author        the commit is authored by me now (used with -C/-c/--amend)
+    --trailer <trailer>   add custom trailer(s)
+    -s, --signoff         add a Signed-off-by trailer
+    -t, --template <file>
+                          use specified template file
+    -e, --edit            force edit of commit
+    --cleanup <mode>      how to strip spaces and #comments from message
+    --status              include status in commit message template
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+
+Commit contents options
+    -a, --all             commit all changed files
+    -i, --include         add specified files to index for commit
+    --interactive         interactively add files
+    -p, --patch           interactively add changes
+    -n, --no-verify       bypass pre-commit and commit-msg hooks
+    --dry-run             show what would be committed
+    --short               show status concisely
+    --ahead-behind        compute full ahead/behind values
+    --porcelain           machine-readable output
+    --long                show status in long format (default)
+    -z, --null            terminate entries with NUL
+    --amend               amend previous commit
+    --no-post-rewrite     bypass post-rewrite hook
+    -u, --untracked-files[=<mode>]
+    --pathspec-from-file <file>
+                          read pathspec from file
+
+[ft/service-redesign d88eb4d] Merge pull request #1 from serapieTuyishime/ft/bundle-2
+ Author: Chrissie <chrissiemhrk@gmail.com>
+ Date: Wed Oct 19 17:36:45 2022 +0200
+PS C:\Users\TheGym\Desktop\Git exercises> git push --set-upstream origin ft/service-redesign
+PS C:\Users\TheGym\Desktop\Git exercises> git pull 
+Already up to date.
+PS C:\Users\TheGym\Desktop\Git exercises> git checkout -b ft/service-redesign
+Switched to a new branch 'ft/service-redesign'
+PS C:\Users\TheGym\Desktop\Git exercises> git add .
+PS C:\Users\TheGym\Desktop\Git exercises> git status  
+On branch ft/service-redesign
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   services.html
+
+PS C:\Users\TheGym\Desktop\Git exercises> git commit -m "ft/service-redesign: added changes on the services.html"
+ 1 file changed, 2 insertions(+)
+PS C:\Users\TheGym\Desktop\Git exercises> git push -u origin ft/service-redesign
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/service-redesign' on GitHub by visiting:
+remote:      https://github.com/serapieTuyishime/Git-exercise-1/pull/new/ft/service-redesign
+remote:
+To https://github.com/serapieTuyishime/Git-exercise-1.git
+ * [new branch]      ft/service-redesign -> ft/service-redesign
+branch 'ft/service-redesign' set up to track 'origin/ft/service-redesign'.
+PS C:\Users\TheGym\Desktop\Git exercises> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\TheGym\Desktop\Git exercises> git add .
+ 1 file changed, 5 insertions(+)
+Enumerating objects: 5, done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/serapieTuyishime/Git-exercise-1.git
+branch 'main' set up to track 'origin/main'.
+PS C:\Users\TheGym\Desktop\Git exercises> git checkout -
+Switched to branch 'ft/service-redesign'
+Your branch is up to date with 'origin/ft/service-redesign'.
+PS C:\Users\TheGym\Desktop\Git exercises> git diff --iteractive
+PS C:\Users\TheGym\Desktop\Git exercises> git diff --interactive
+error: invalid option: --interactive
+PS C:\Users\TheGym\Desktop\Git exercises> git checkout -
+Switched to branch 'main'
+PS C:\Users\TheGym\Desktop\Git exercises> git diff
+PS C:\Users\TheGym\Desktop\Git exercises> git checkout -
+Your branch is up to date with 'origin/ft/service-redesign'.
+PS C:\Users\TheGym\Desktop\Git exercises> git checkout -
+error: Your local changes to the following files would be overwritten by checkout:
+        services.html
+Aborting
+PS C:\Users\TheGym\Desktop\Git exercises> git pull
+PS C:\Users\TheGym\Desktop\Git exercises> git checkout -
+error: Your local changes to the following files would be overwritten by checkout:
+        services.html
+Please commit your changes or stash them before you switch branches.
+Unstaged changes after reset:
+M       services.html
+PS C:\Users\TheGym\Desktop\Git exercises> git checkout -
+error: Your local changes to the following files would be overwritten by checkout:
+        services.html
+Please commit your changes or stash them before you switch branches.
+Aborting
+PS C:\Users\TheGym\Desktop\Git exercises> git reset
+Unstaged changes after reset:
+M       services.html
+PS C:\Users\TheGym\Desktop\Git exercises> git checkout -
+error: Your local changes to the following files would be overwritten by checkout:
+        services.html
+Aborting
+PS C:\Users\TheGym\Desktop\Git exercises> git add .
+ 1 file changed, 1 insertion(+)
+Enumerating objects: 5, done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/serapieTuyishime/Git-exercise-1.git
+   172e6ef..332147d  ft/service-redesign -> ft/service-redesign
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\TheGym\Desktop\Git exercises> git pull
+Already up to date.
+PS C:\Users\TheGym\Desktop\Git exercises> git merge
+Already up to date.
+PS C:\Users\TheGym\Desktop\Git exercises> git checkout -
+Switched to branch 'ft/service-redesign'
+Your branch is up to date with 'origin/ft/service-redesign'.
+PS C:\Users\TheGym\Desktop\Git exercises> git checkout -
+error: Your local changes to the following files would be overwritten by checkout:
+        services.html
+Aborting
+PS C:\Users\TheGym\Desktop\Git exercises> git add .
+[ft/service-redesign 189e520] Another conflic creation
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 371 bytes | 371.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/serapieTuyishime/Git-exercise-1.git
+branch 'ft/service-redesign' set up to track 'origin/ft/service-redesign'.
+Your branch is up to date with 'origin/main'.
+PS C:\Users\TheGym\Desktop\Git exercises> git pull
+Already up to date.
+PS C:\Users\TheGym\Desktop\Git exercises> git diff
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 718 bytes | 20.00 KiB/s, done.
+From https://github.com/serapieTuyishime/Git-exercise-1
+   189e520..930351b  ft/service-redesign -> origin/ft/service-redesign
+Already up to date.
+PS C:\Users\TheGym\Desktop\Git exercises> git merge
+Already up to date.
+PS C:\Users\TheGym\Desktop\Git exercises> git add .
+PS C:\Users\TheGym\Desktop\Git exercises> git commit -m "main:resorved conflicts"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+PS C:\Users\TheGym\Desktop\Git exercises> git push -u origin main
+Everything up-to-date
+branch 'main' set up to track 'origin/main'.
+PS C:\Users\TheGym\Desktop\Git exercises> 
+```
