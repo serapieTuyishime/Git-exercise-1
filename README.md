@@ -498,3 +498,349 @@ Everything up-to-date
 branch 'main' set up to track 'origin/main'.
 PS C:\Users\TheGym\Desktop\Git exercises> 
 ```
+
+## bundle 3
+### exercise 1
+```bash
+PS C:\Users\TheGym\Desktop\Git exercises> git checkout -b ft/team-page
+Switched to a new branch 'ft/team-page'
+PS C:\Users\TheGym\Desktop\Git exercises> git add .
+PS C:\Users\TheGym\Desktop\Git exercises> git commit -m "ft/team-page: created teams page"
+[ft/team-page 5d92c5e] ft/team-page: created teams page
+ 1 file changed, 18 insertions(+)
+ create mode 100644 team.html
+PS C:\Users\TheGym\Desktop\Git exercises> git push --set-upstream origin ft/team-page
+To https://github.com/serapieTuyishime/Git-exercise-1.git
+ ! [rejected]        ft/team-page -> ft/team-page (non-fast-forward)
+error: failed to push some refs to 'https://github.com/serapieTuyishime/Git-exercise-1.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+PS C:\Users\TheGym\Desktop\Git exercises> git push --set-upstream origin ft/team-page
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 652 bytes | 652.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote:      https://github.com/serapieTuyishime/Git-exercise-1/pull/new/ft/team-page
+remote:
+To https://github.com/serapieTuyishime/Git-exercise-1.git
+ * [new branch]      ft/team-page -> ft/team-page
+branch 'ft/team-page' set up to track 'origin/ft/team-page'.
+PS C:\Users\TheGym\Desktop\Git exercises> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\TheGym\Desktop\Git exercises> git checkout -b ft/contact-page
+Switched to a new branch 'ft/contact-page'
+PS C:\Users\TheGym\Desktop\Git exercises> git checkout ft/contact-page
+ *  History restored 
+
+
+Try the new cross-platform PowerShell https://aka.ms/pscore6
+PS C:\Users\TheGym\Desktop\Git exercises> git checkout main
+Your branch is up to date with 'origin/main'.
+PS C:\Users\TheGym\Desktop\Git exercises> git branch -a
+  ft/bundle-2
+  ft/contact-page
+  ft/service-redesign
+  ft/team-page
+* main
+  remotes/origin/dev
+  remotes/origin/ft/bundle-2
+  remotes/origin/ft/service-redesign
+  remotes/origin/ft/team-page
+  remotes/origin/main
+PS C:\Users\TheGym\Desktop\Git exercises> git branch -D ft/team-page
+Deleted branch ft/team-page (was 5d92c5e).
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\TheGym\Desktop\Git exercises> git add .
+PS C:\Users\TheGym\Desktop\Git exercises> git commit -m "main:created a team.html page"
+[main 8c2762a] main:created a team.html page
+ 1 file changed, 12 insertions(+)
+ create mode 100644 team.html
+PS C:\Users\TheGym\Desktop\Git exercises> git push --set-upstream origin main
+To https://github.com/serapieTuyishime/Git-exercise-1.git
+ ! [rejected]        main -> main (fetch first)
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+PS C:\Users\TheGym\Desktop\Git exercises> git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+From https://github.com/serapieTuyishime/Git-exercise-1
+   d17f69f..b62a8a4  main       -> origin/main
+Merge made by the 'ort' strategy.
+ README.md | 219 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 219 insertions(+)
+PS C:\Users\TheGym\Desktop\Git exercises> git push --set-upstream origin main
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 787 bytes | 196.00 KiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0), pack-reused 0
+To https://github.com/serapieTuyishime/Git-exercise-1.git
+branch 'main' set up to track 'origin/main'.
+PS C:\Users\TheGym\Desktop\Git exercises> git branch -a
+  dev
+  ft/bundle-2
+  ft/contact-page
+  ft/service-redesign
+  list
+* main
+  remotes/origin/dev
+  remotes/origin/ft/bundle-2
+  remotes/origin/ft/service-redesign
+  remotes/origin/ft/team-page
+  remotes/origin/main
+PS C:\Users\TheGym\Desktop\Git exercises> git checkout -b ft/team-page
+Switched to a new branch 'ft/team-page'
+PS C:\Users\TheGym\Desktop\Git exercises> git checkout -
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\TheGym\Desktop\Git exercises> git revert
+usage: git revert [<options>] <commit-ish>...
+   or: git revert <subcommand>
+
+    --quit                end revert or cherry-pick sequence
+    --continue            resume revert or cherry-pick sequence
+    --abort               cancel revert or cherry-pick sequence
+    --skip                skip current commit and continue
+    --cleanup <mode>      how to strip spaces and #comments from message
+    -n, --no-commit       don't automatically commit
+    -e, --edit            edit the commit message
+    -s, --signoff         add a Signed-off-by trailer
+    -m, --mainline <parent-number>
+                          select mainline parent
+    --rerere-autoupdate   update the index with reused conflict resolution if possible
+    --strategy <strategy>
+                          merge strategy
+    -X, --strategy-option <option>
+                          option for merge strategy
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+    --reference           use the 'reference' format to refer to commits
+
+PS C:\Users\TheGym\Desktop\Git exercises> git reset --hard HEAD@{1}
+error: unknown switch `e'
+usage: git reset [--mixed | --soft | --hard | --merge | --keep] [-q] [<commit>]
+   or: git reset [-q] [<tree-ish>] [--] <pathspec>...
+   or: git reset [-q] [--pathspec-from-file [--pathspec-file-nul]] [<tree-ish>]
+   or: git reset --patch [<tree-ish>] [--] [<pathspec>...]
+   or: DEPRECATED: git reset [-q] [--stdin [-z]] [<tree-ish>]
+
+    --no-refresh          skip refreshing the index after reset
+    --mixed               reset HEAD and index
+    --soft                reset only HEAD
+    --merge               reset HEAD, index and working tree
+    --keep                reset HEAD but keep local changes
+    --recurse-submodules[=<reset>]
+    -p, --patch           select hunks interactively
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+    -z                    DEPRECATED (use --pathspec-file-nul instead): paths are separated with NUL character
+    --stdin               DEPRECATED (use --pathspec-from-file=- instead): read paths from <stdin>
+
+PS C:\Users\TheGym\Desktop\Git exercises> git reset 1
+fatal: ambiguous argument '1': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+PS C:\Users\TheGym\Desktop\Git exercises> git reset --hard 1       
+fatal: ambiguous argument '1': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+PS C:\Users\TheGym\Desktop\Git exercises> git history
+git: 'history' is not a git command. See 'git --help'.
+PS C:\Users\TheGym\Desktop\Git exercises> git log
+Merge: 8c2762a b62a8a4
+Author: serapieTuyishime <tuyiserapie1@gmail.com>
+Date:   Tue Oct 25 17:13:12 2022 +0200
+    Merge branch 'main' of https://github.com/serapieTuyishime/Git-exercise-1
+
+commit 8c2762a81c0a615758f1edf45cc17289a3aed8a4
+Author: serapieTuyishime <tuyiserapie1@gmail.com>
+Date:   Tue Oct 25 17:12:39 2022 +0200
+
+    main:created a team.html page
+
+commit b62a8a4123fbfff826b3d21d9255113a2987d9ac
+Author: serapieTuyishime <70019756+serapieTuyishime@users.noreply.github.com>
+Date:   Mon Oct 24 07:12:36 2022 -0700
+
+PS C:\Users\TheGym\Desktop\Git exercises> git revert 8c2762a81c0a615758f1edf45cc17289a3aed8a
+ 1 file changed, 12 deletions(-)
+PS C:\Users\TheGym\Desktop\Git exercises> git branch -a
+  D
+  dev
+  ft/bundle-2
+  ft/contact-page
+  ft/service-redesign
+  ft/team-page
+  list
+* main
+  remotes/origin/dev
+  remotes/origin/ft/bundle-2
+  remotes/origin/ft/service-redesign
+  remotes/origin/main
+PS C:\Users\TheGym\Desktop\Git exercises> git branch -a
+  D
+  dev
+  ft/contact-page
+  ft/service-redesign
+  list
+* main
+  remotes/origin/dev
+  remotes/origin/ft/bundle-2
+  remotes/origin/ft/service-redesign
+  remotes/origin/ft/team-page
+  remotes/origin/main
+PS C:\Users\TheGym\Desktop\Git exercises> git checkout -b ft/team-page
+Switched to a new branch 'ft/team-page'
+PS C:\Users\TheGym\Desktop\Git exercises> git add .
+PS C:\Users\TheGym\Desktop\Git exercises> git commit -m "ft/team-page : created a team-page and a team branch"
+[ft/team-page dc7d59a] ft/team-page : created a team-page and a team branch
+ create mode 100644 team.html
+PS C:\Users\TheGym\Desktop\Git exercises> git push --set-upstream origin ft/team-page
+Enumerating objects: 7, done.
+Delta compression using up to 4 threads
+Writing objects: 100% (5/5), 862 bytes | 431.00 KiB/s, done.
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+remote:
+remote:      https://github.com/serapieTuyishime/Git-exercise-1/pull/new/ft/team-page
+remote:
+To https://github.com/serapieTuyishime/Git-exercise-1.git
+ * [new branch]      ft/team-page -> ft/team-page
+branch 'ft/team-page' set up to track 'origin/ft/team-page'.
+PS C:\Users\TheGym\Desktop\Git exercises> git checkout - 
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+PS C:\Users\TheGym\Desktop\Git exercises> git checkout -b ft/contact-page
+fatal: a branch named 'ft/contact-page' already exists
+PS C:\Users\TheGym\Desktop\Git exercises> git checkout  ft/contact-page  
+Switched to branch 'ft/contact-page'
+PS C:\Users\TheGym\Desktop\Git exercises> git checkout  ft/team-page
+Switched to branch 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-page'.
+PS C:\Users\TheGym\Desktop\Git exercises> git log
+Author: serapieTuyishime <tuyiserapie1@gmail.com>
+
+    ft/team-page : created a team-page and a team branch
+
+commit 4a6d09ee5d89e071ff3ced32e9aec148cb428e46 (main)
+
+    Revert "main:created a team.html page"
+    This reverts commit 8c2762a81c0a615758f1edf45cc17289a3aed8a4.
+
+commit 6dba56f38b56030340693e73c9e39a22d1d6c84e (origin/main)
+Merge: 8c2762a b62a8a4
+Author: serapieTuyishime <tuyiserapie1@gmail.com>
+PS C:\Users\TheGym\Desktop\Git exercises> git checkout ft/contact-page
+Switched to branch 'ft/contact-page'
+PS C:\Users\TheGym\Desktop\Git exercises> git cherry-pick dc7d59aa4a5f611327842f3c44896d3146272ed5
+[ft/contact-page 18d09c9] ft/team-page : created a team-page and a team branch
+ Date: Tue Oct 25 17:24:14 2022 +0200
+ 1 file changed, 13 insertions(+)
+ create mode 100644 team.html
+PS C:\Users\TheGym\Desktop\Git exercises> git add .
+PS C:\Users\TheGym\Desktop\Git exercises> git commit -m "ft:contact-page have edited team.tml"
+ 1 file changed, 1 insertion(+)
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/serapieTuyishime/Git-exercise-1/pull/new/ft/contact-page
+remote:
+To https://github.com/serapieTuyishime/Git-exercise-1.git
+ * [new branch]      ft/contact-page -> ft/contact-page
+branch 'ft/contact-page' set up to track 'origin/ft/contact-page'.
+PS C:\Users\TheGym\Desktop\Git exercises> git checkout -b ft/faq-page
+Switched to a new branch 'ft/faq-page'
+PS C:\Users\TheGym\Desktop\Git exercises> git add .
+PS C:\Users\TheGym\Desktop\Git exercises> git commit -m "ft/faq-page was created"
+[ft/faq-page 68722d8] ft/faq-page was created
+ create mode 100644 FAq.html
+PS C:\Users\TheGym\Desktop\Git exercises> git push -u origin ft/faq-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 492 bytes | 123.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote:      https://github.com/serapieTuyishime/Git-exercise-1/pull/new/ft/faq-page
+remote:
+To https://github.com/serapieTuyishime/Git-exercise-1.git
+ * [new branch]      ft/faq-page -> ft/faq-page
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+PS C:\Users\TheGym\Desktop\Git exercises> git log
+Author: serapieTuyishime <tuyiserapie1@gmail.com>
+Date:   Tue Oct 25 17:35:05 2022 +0200
+
+    ft/faq-page was created
+
+commit 52412f38f890968d7197af8c267cf77bd3bc3486 (origin/ft/contact-page, ft/contact-page)
+Author: serapieTuyishime <tuyiserapie1@gmail.com>
+Date:   Tue Oct 25 17:32:12 2022 +0200
+    ft:contact-page have edited team.tml
+commit 18d09c90056f1bf2f939dd926e400c7cb9a47a9d
+Author: serapieTuyishime <tuyiserapie1@gmail.com>
+Date:   Tue Oct 25 17:24:14 2022 +0200
+PS C:\Users\TheGym\Desktop\Git exercises> git revert dc7d59aa4a5f611327842f3c44896d3146272ed5
+CONFLICT (modify/delete): team.html deleted in parent of dc7d59a (ft/team-page : created a team-page and a team branch) and modified in HEAD.  Version HEAD of team.html left in tree.
+error: could not revert dc7d59a... ft/team-page : created a team-page and a team branch
+hint: "git add/rm <pathspec>", then run
+hint: "git revert --continue".
+hint: You can instead skip this commit with "git revert --skip".
+hint: To abort and get back to the state before "git revert",
+hint: run "git revert --abort".
+PS C:\Users\TheGym\Desktop\Git exercises> git revert dc7d59aa4a5f611327842f3c44896d3146272ed5
+error: your local changes would be overwritten by revert.
+hint: commit your changes or stash them to proceed.
+fatal: revert failed
+PS C:\Users\TheGym\Desktop\Git exercises> git add .
+[ft/faq-page 8113593] ft: faq trying to revert
+ 1 file changed, 14 deletions(-)
+PS C:\Users\TheGym\Desktop\Git exercises> git revert dc7d59aa4a5f611327842f3c44896d3146272ed5
+On branch ft/faq-page
+Your branch is ahead of 'origin/ft/faq-page' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+PS C:\Users\TheGym\Desktop\Git exercises> git add .
+PS C:\Users\TheGym\Desktop\Git exercises> git commit -m "ft/faq-page: reverted other people's changes"
+On branch ft/faq-page
+Your branch is ahead of 'origin/ft/faq-page' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+PS C:\Users\TheGym\Desktop\Git exercises> git push -u origin ft:faq-page
+error: src refspec ft does not match any
+error: failed to push some refs to 'https://github.com/serapieTuyishime/Git-exercise-1.git'
+PS C:\Users\TheGym\Desktop\Git exercises> git push -u origin ft/faq-page
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 237 bytes | 237.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/serapieTuyishime/Git-exercise-1.git
+   68722d8..8113593  ft/faq-page -> ft/faq-page
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+PS C:\Users\TheGym\Desktop\Git exercises> 
+```
