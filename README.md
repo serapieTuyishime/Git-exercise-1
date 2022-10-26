@@ -979,3 +979,67 @@ To https://github.com/serapieTuyishime/Git-exercise-2.git
  + fa0c6d5...8fcaa31 main -> main (forced update)
 PS C:\Users\TheGym\Desktop\Git exercises> 
 ```
+
+## bundle4
+### exercise 2
+```bash
+PS C:\Users\TheGym\Desktop\Git exercises> git checkout ft/footer
+Switched to branch 'ft/footer'
+PS C:\Users\TheGym\Desktop\Git exercises> git add .
+PS C:\Users\TheGym\Desktop\Git exercises> git commit -m "First change"
+[ft/footer e961711] First change 
+ 1 file changed, 13 insertions(+)
+ create mode 100644 footer.html  
+PS C:\Users\TheGym\Desktop\Git exercises> git add .
+PS C:\Users\TheGym\Desktop\Git exercises> git commit -m "ft: Second change"
+[ft/footer db8b57e] ft: Second change
+PS C:\Users\TheGym\Desktop\Git exercises> git push -u origin ft/footer  
+Enumerating objects: 7, done.
+Delta compression using up to 4 threads
+Writing objects: 100% (6/6), 890 bytes | 445.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.    
+remote:
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:    
+remote:      https://github.com/serapieTuyishime/Git-exercise-1/pull/newremote:
+ * [new branch]      ft/footer -> ft/footer
+branch 'ft/footer' set up to track 'origin/ft/footer'.
+PS C:\Users\TheGym\Desktop\Git exercises> git checkout main
+Your branch is up to date with 'origin/main'.
+PS C:\Users\TheGym\Desktop\Git exercises> git checkout -b ft/squashing  
+Switched to a new branch 'ft/squashing'
+PS C:\Users\TheGym\Desktop\Git exercises> git merge --squash ft/footer  
+Updating 3092e53..db8b57e
+Fast-forward
+ footer.html | 14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+ create mode 100644 footer.html
+PS C:\Users\TheGym\Desktop\Git exercises> git add .
+PS C:\Users\TheGym\Desktop\Git exercises> git commit -m "Squashing footer changes"
+[ft/squashing 10c9a79] Squashing footer changes
+ 1 file changed, 14 insertions(+)
+ create mode 100644 footer.html
+PS C:\Users\TheGym\Desktop\Git exercises> git push -u ft/squashing      
+fatal: 'ft/squashing' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+PS C:\Users\TheGym\Desktop\Git exercises> git push -u origin ft/squashing
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 638 bytes | 638.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/serapieTuyishime/Git-exercise-1/pull/new/ft/squashing
+remote:
+To https://github.com/serapieTuyishime/Git-exercise-1.git
+ * [new branch]      ft/squashing -> ft/squashing
+branch 'ft/squashing' set up to track 'origin/ft/squashing'.
+PS C:\Users\TheGym\Desktop\Git exercises>
+
+```
